@@ -13,7 +13,7 @@ def make_git_add():
 
 
 def make_git_commit():
-    git_commit = ["git", "commit", "-m", "\"commit\""]
+    git_commit = ["git", "commit", "-m", "commit"]
     subprocess.run(git_commit, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 
 

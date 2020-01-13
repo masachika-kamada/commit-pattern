@@ -1,6 +1,5 @@
 import csv
 import numpy as np
-import subprocess
 import datetime
 from commit_test import make_time_git_commit
 
