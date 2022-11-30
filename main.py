@@ -1,7 +1,7 @@
 import csv
 import numpy as np
 import datetime
-from commit_test import make_time_git_commit
+from commit_func import make_time_git_commit
 
 
 def get_commit_pattern(file_name):
@@ -20,10 +20,13 @@ def change_file(file_name):
 def main():
     pattern_file = "pattern.csv"
     commit_pattern = get_commit_pattern(pattern_file)
-    start_year = 2020
-    start_month = 1
-    start_day = 12
-    d = datetime.date(start_year, start_month, start_day)
+
+    # 描画するパターンの中で最も日にちが早い箇所の基準点を設定
+    START_YEAR  = 2020
+    START_MONTH = 1
+    START_DAY   = 12
+
+    d = datetime.date(START_YEAR, START_MONTH, START_DAY)
     for b in commit_pattern.reshape(-1):
         if b == "1":
             change_file("commit_file")
